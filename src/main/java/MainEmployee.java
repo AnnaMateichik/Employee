@@ -10,6 +10,8 @@ public class MainEmployee {
         e[5] = new Manager(678, "Sarah", 35, 7000, 0.15);
 
         print(e);
+        printAdv(e);
+        printSuperAdv(e);
 
     }
     public static void print(Employee[] employees) {
@@ -18,5 +20,35 @@ public class MainEmployee {
                 System.out.println(e.toString() + " " + e.calcSalary());
             }
         }
+    }
+    public static void printAdv(Employee[] employees){
+        double sum = 0;
+        for (Employee e : employees) {
+            if (e != null) {
+
+                System.out.println(e.toString() + " " + e.calcSalary());
+                sum += e.calcSalary();
+            }
+
+        }
+        System.out.println("-----------------");
+        System.out.println("total salary: " + sum);
+    }
+
+    public static void printSuperAdv(Employee[] employees){
+        double sum = 0;
+        int count = 0;
+        for (Employee e : employees) {
+            if (e != null) {
+
+                System.out.println(e.toString() + " " + e.calcSalary());
+                sum = sum + e.calcSalary();
+                count ++;
+            }
+
+        }
+        System.out.println("-----------------");
+        System.out.println("total salary: " + sum);
+        System.out.println("average salary: " + sum/count);
     }
 }
