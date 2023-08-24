@@ -19,7 +19,7 @@ public class WageEmployee extends Employee {
 
     @Override
     public double calcSalary() {
-        super.calcSalary();
+        // super.calcSalary();
 
         return hours * hourPrice;
     }
@@ -28,5 +28,6 @@ public class WageEmployee extends Employee {
     public String toString() {
 
         return super.toString() + " " +  hours * hourPrice;
+        // return super.toString() + " " +  calcSalary();
     }
 }
