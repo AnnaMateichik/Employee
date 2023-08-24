@@ -13,13 +13,13 @@ public class SalaryEmployee extends Employee{
 
     @Override
     public double calcSalary() {
-        super.calcSalary();
+        // super.calcSalary();
         return salary;
     }
 
     @Override
     public String toString() {
-        super.toString();
+        // super.toString();
         return super.toString() + " " + salary;
     }
 }
